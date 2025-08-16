@@ -9,7 +9,7 @@ entries:
     name: protonmail-bridge
     type: application
     urls:
-    - https://rollydevops.github.io/charts.git/helm/protonmail-bridge-0.1.2.tgz
+    - https://rollydevops.github.io/charts/helm/protonmail-bridge-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 3.19.0-build
@@ -19,7 +19,7 @@ entries:
     name: protonmail-bridge
     type: application
     urls:
-    - https://rollydevops.github.io/charts.git/helm/protonmail-bridge-0.1.1.tgz
+    - https://rollydevops.github.io/charts/helm/protonmail-bridge-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 3.19.0-build
@@ -29,6 +29,6 @@ entries:
     name: protonmail-bridge
     type: application
     urls:
-    - https://rollydevops.github.io/charts.git/helm/protonmail-bridge-0.1.0.tgz
+    - https://rollydevops.github.io/charts/helm/protonmail-bridge-0.1.0.tgz
     version: 0.1.0
 generated: "2025-08-16T14:26:32.41442+03:00"
