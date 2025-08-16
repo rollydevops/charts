@@ -19,6 +19,6 @@ entries:
     name: protonmail-bridge
     type: application
     urls:
-    - https://rollydevops.github.io/charts/gh-pages/protonmail-bridge-0.1.0.tgz
+    - https://rollydevops.github.io/charts/helm/protonmail-bridge-0.1.0.tgz
     version: 0.1.0
 generated: "2025-08-16T13:09:25.517362+03:00"
