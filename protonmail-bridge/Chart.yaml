@@ -2,7 +2,7 @@ apiVersion: v2
 name: protonmail-bridge
 description: A Helm chart for deploying ProtonMail Bridge in kubernetes
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "3.19.0-build"
 
 
