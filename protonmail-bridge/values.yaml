@@ -72,9 +72,7 @@ persistence:
     - ReadWriteOnce
   size: 1Gi
   mountPath: /root
-  # Uncomment and set the hostPath if you want to create a PV with hostPath
-  # hostPath: /data/protonmail-bridge
-  reclaimPolicy: Retain
+
 
 # Deployment strategy Recreate to prevent instance already running errors.
 strategy:
