@@ -3,7 +3,17 @@ entries:
   protonmail-bridge:
   - apiVersion: v2
     appVersion: 3.19.0-build
-    created: "2025-08-16T14:26:32.416661+03:00"
+    created: "2025-08-16T14:35:57.737654+03:00"
+    description: A Helm chart for deploying ProtonMail Bridge in kubernetes
+    digest: 0b53cf2db87172f2e4ac5bbb4ac7d7882dd1e01870ded19db91b63a07e6e5034
+    name: protonmail-bridge
+    type: application
+    urls:
+    - https://rollydevops.github.io/charts/helm/protonmail-bridge-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 3.19.0-build
+    created: "2025-08-16T14:35:57.737024+03:00"
     description: A Helm chart for deploying ProtonMail Bridge in kubernetes
     digest: 2d69150fc9f69b40c1718a36dbce9c157ca24d69c04c1ebf9560aa17adfe9755
     name: protonmail-bridge
@@ -13,7 +23,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 3.19.0-build
-    created: "2025-08-16T14:26:32.41602+03:00"
+    created: "2025-08-16T14:35:57.736395+03:00"
     description: A Helm chart for deploying ProtonMail Bridge in kubernetes
     digest: e52a1adf592721eff97d02bc1384f08d6570c258bed449b28412be4f14bfe3db
     name: protonmail-bridge
@@ -23,7 +33,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 3.19.0-build
-    created: "2025-08-16T14:26:32.415366+03:00"
+    created: "2025-08-16T14:35:57.735735+03:00"
     description: A Helm chart for deploying ProtonMail Bridge in kubernetes
     digest: 7aa51580b62bd252d198ff060c52a12cbcc7c3c5b29c2d8f4f27af49a78ae946
     name: protonmail-bridge
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://rollydevops.github.io/charts/helm/protonmail-bridge-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-16T14:26:32.41442+03:00"
+generated: "2025-08-16T14:35:57.734828+03:00"
