@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  protonmail-bridge:
+  - apiVersion: v2
+    appVersion: 3.19.0-build
+    created: "2025-08-16T12:59:43.135301+03:00"
+    description: A Helm chart for deploying ProtonMail Bridge in kubernetes
+    digest: 7aa51580b62bd252d198ff060c52a12cbcc7c3c5b29c2d8f4f27af49a78ae946
+    name: protonmail-bridge
+    type: application
+    urls:
+    - https://rollydevops.github.io/charts/protonmail-bridge-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-08-16T12:59:43.132365+03:00"

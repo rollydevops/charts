@@ -1,0 +1,37 @@
+1. Initialization Instructions:
+{{- if not .Values.initContainer.enabled }}
+   To initialize ProtonMail Bridge:
+     1. Exec into the running container:
+        kubectl exec -it deployment/{{ include "protonmail-bridge.fullname" . }} -- /bin/bash
+     2. Run the following command to start the initialization:
+        /bash/entrypoint.sh init
+     3. Enter your ProtonMail credentials when prompted.
+     4. After successful login, run:
+        info
+        This will print the connection information.
+     5. Use port 25 for SMTP and port 143 for IMAP.
+{{- else }}
+   Automatic initialization is enabled.
+   Ensure the following environment variables are set in your values.yaml:
+     - PROTONMAIL_EMAIL
+     - PROTONMAIL_PASSWORD
+   The container will auto-login on startup.
+   Use port 25 for SMTP and port 143 for IMAP.
+{{- end }}
+
+2. ProtonMail Bridge Configuration:
+   - IMAP Port: {{ .Values.service.ports.imap.port }}
+   - SMTP Port: {{ .Values.service.ports.smtp.port }}
+   - Timezone: {{ .Values.env.TZ }}
+
+3. To configure ProtonMail Bridge, you may need to exec into the pod:
+   kubectl exec -it deployment/{{ include "protonmail-bridge.fullname" . }} -- /bin/bash
+
+4. Data persistence:
+{{- if .Values.persistence.enabled }}
+   - Persistent storage is enabled
+   - Storage size: {{ .Values.persistence.size }}
+   - Mount path: {{ .Values.persistence.mountPath }}
+{{- else }}
+   - Persistent storage is disabled. Data will be lost when the pod restarts.
+{{- end }}

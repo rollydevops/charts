@@ -1,0 +1,87 @@
+name: protonmail-bridge
+description: A Helm chart for deploying ProtonMail Bridge
+version: 0.1.0
+appVersion: "1.0" 
+
+initContainer:
+  enabled: false
+
+image:
+  repository: shenxn/protonmail-bridge
+  pullPolicy: IfNotPresent
+  tag: "3.19.0-build"
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  enabled: true
+  annotations: {}
+  type: ClusterIP
+  ports:
+    imap:
+      port: 143
+      targetPort: 143
+      protocol: TCP
+    smtp:
+      port: 25
+      targetPort: 25
+      protocol: TCP
+
+env:
+  TZ: "UTC" # for docker logging
+
+# Probes configuration
+probes:
+  liveness:
+    enabled: true
+    failureThreshold: 3
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 3
+    port: 25
+  readiness:
+    enabled: true
+    failureThreshold: 3
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 3
+    port: 25
+  startup:
+    enabled: true
+    failureThreshold: 10
+    periodSeconds: 5
+    successThreshold: 1
+    timeoutSeconds: 3
+    port: 25
+
+# Resource limits and requests
+resources:
+  requests:
+    cpu: "0.1"
+    memory: "256Mi"
+  limits:
+    cpu: "1"
+    memory: "1.5Gi"
+
+# Persistence configuration
+persistence:
+  enabled: true
+  storageClass: ""  # Uses default storage class if empty
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi
+  mountPath: /root
+  # Uncomment and set the hostPath if you want to create a PV with hostPath
+  # hostPath: /data/protonmail-bridge
+  reclaimPolicy: Retain
+
+# Deployment strategy Recreate to prevent instance already running errors.
+strategy:
+  type: Recreate
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
